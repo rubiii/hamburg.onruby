@@ -6,7 +6,10 @@
     = stylesheet_link_tag "reset", "layout", :cache => true
 
   %body
-    %ul.account
-      - account_links.each do |link|
-        %li= link
-    = yield
+    #wrapper
+      %h1= link_to "hamburg.onruby", root_url
+      %ul#account
+        - account_links.each do |link|
+          %li= link
+      #stage
+        = yield
