@@ -1,6 +1,9 @@
 log/*.log
 tmp/**/*
 db/*.sqlite3
+db/schema.rb
+public/javascripts/all.js
+public/stylesheets/all.js
 .DS_Store
 .project
 .loadpath
