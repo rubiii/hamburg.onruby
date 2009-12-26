@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title hamburg.onruby
+    %meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    = stylesheet_link_tag "reset", "layout", :cache => true
+
+  %body
+    %ul.account
+      - account_links.each do |link|
+        %li= link
+    = yield

@@ -1,0 +1,7 @@
+- @users.each do |user|
+  %div
+    =h link_to(user.username, user)
+    %br
+    =h user.password
+    %br
+    =h user.email

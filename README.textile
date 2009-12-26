@@ -1,0 +1,7 @@
+h1. hamburg.onruby
+
+p. Website for "hamburg.onruby":http://hamburg.onruby.de
+
+h3. How can I participate?
+
+p. Just let me know who you are, what you're doing and why you want to contribute to the website. That's it.

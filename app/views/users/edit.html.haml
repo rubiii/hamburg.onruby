@@ -1,0 +1,24 @@
+- form_for @user do |f|
+  = f.error_messages
+
+  %p
+    = f.label :username
+    %br
+    = f.text_field :username
+
+  %p
+    = f.label :password
+    %br
+    = f.text_field :password
+
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+
+  %p
+    = f.submit "Update"
+
+= link_to "Show", @user
+%br
+= link_to "Back", users_path

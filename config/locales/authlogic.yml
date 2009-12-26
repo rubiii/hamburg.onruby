@@ -1,0 +1,22 @@
+de:
+  authlogic:
+    error_messages:
+      login_blank: ist ein Pflichtfeld
+      login_not_found: ist ungültig
+      login_invalid: erlaubt nur Buchstaben, Nummern, Leerzeichen, sowie .-_@
+      consecutive_failed_logins_limit_exceeded: Zu viele fehlgeschlagene Anmeldeversuche. Account gesperrt.
+      email_invalid: ist keine gültige E-Mail Adresse
+      password_blank: ist ein Pflichtfeld
+      password_invalid: ist ungültig
+      not_active: Dein Account ist (noch) nicht aktiv
+      not_confirmed: Dein Account wurde (noch) nicht bestätigt
+      not_approved: Dein Account wurde (noch) nicht freigegeben
+      no_authentication_details: Anmeldungsdetails fehlen
+    models:
+      user_session: UserSession
+    attributes:
+      user_session:
+        login: Login
+        email: E-Mail
+        password: Passwort
+        remember_me: Daten merken
