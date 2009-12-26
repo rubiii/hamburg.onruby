@@ -21,12 +21,19 @@ class UsersController < ApplicationController
     end
   end
 
-  # Edit the currently logged in user.
+  # Show the user profile of a given user.
+  def show
+    @user = User.find params[:id]
+  rescue ActiveRecord::RecordNotFound
+    render :action => "not_found"
+  end
+
+  # Edit the logged in user.
   def edit
     @user = current_user
   end
 
-  # Update the profile of the currently logged in user.
+  # Update the profile of the logged in user.
   def update
     @user = current_user
     if @user.update_attributes params[:user]
