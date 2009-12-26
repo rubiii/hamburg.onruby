@@ -1,15 +1,14 @@
-- form_for @user_session do |f|
-  = f.error_messages
+- form_for @user_session do |us|
+  = us.error_messages
 
-  %p
-    = f.label :username
-    %br
-    = f.text_field :username
+  %h2 Anmelden
 
-  %p
-    = f.label :password
-    %br
-    = f.password_field :password
-
-  %p
-    = f.submit "Submit"
+  .block
+    = us.label :username
+    = us.text_field :username
+  .block
+    = us.label :password
+    = us.password_field :password
+  .block.action
+    = us.submit t("labels.login")
+    = link_to t("labels.or_cancel"), root_url, :class => "cancel"

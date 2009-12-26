@@ -1,8 +1,7 @@
 %h2 Rubyists
 
 - @users.each do |user|
-  %div
+  .person.small
     = image_tag user.gravatar_url
-    = link_to(user.username, user)
-    %br
-    =h user.email
+    %h4= link_to(user.username, user)
+    %p=h user.email

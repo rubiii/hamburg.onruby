@@ -1,9 +1,5 @@
-= image_tag @user.gravatar_url
+%h2= @user.username
 
-%p
-  %b Username:
-  =h @user.username
-
-%p
-  %b Email:
-  =h @user.email
+.person.small
+  = image_tag @user.gravatar_url
+  %h4= @user.email

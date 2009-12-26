@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
   # Edit the logged in user.
   def edit
+    redirect_to root_url and return unless current_user
     @user = current_user
   end
 

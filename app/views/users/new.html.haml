@@ -1,27 +1,9 @@
-- form_for @user do |f|
-  = f.error_messages
+- form_for @user do |u|
+  = u.error_messages
 
-  %p
-    = f.label :username
-    %br
-    = f.text_field :username
+  %h2 Neues Profil
+  = render :partial => "form", :locals => { :u => u }
 
-  %p
-    = f.label :password
-    %br
-    = f.password_field :password
-
-  %p
-    = f.label :password_confirmation
-    %br
-    = f.password_field :password_confirmation
-
-  %p
-    = f.label :email
-    %br
-    = f.text_field :email
-
-  %p
-    = f.submit "Create"
-
-= link_to "Back", users_path
+  .block.action
+    = u.submit t("labels.register")
+    = link_to t("labels.or_cancel"), root_url, :class => "cancel"

@@ -5,11 +5,15 @@ module ApplicationHelper
   def account_links
     if current_user
       [ link_to(current_user.username, edit_user_path(:current)),
-        link_to("Logout", logout_path) ]
+        link_to("Abmelden", logout_path) ]
     else
-      [ link_to("Register", register_path),
-        link_to("Login", login_path) ]
+      [ link_to("Registrieren", register_path),
+        link_to("Anmelden", login_path) ]
     end
+  end
+
+  def setup_user(user)
+    returning(user) { |u| u.projects.build if u.projects.empty? }
   end
 
 end

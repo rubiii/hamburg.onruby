@@ -1,0 +1,13 @@
+de:
+  labels:
+    username: "Benutzer:"
+    password: "Passwort:"
+    password_confirmation: "Passwort wiederholen:"
+    email: "E-Mail:"
+    name: "Name:"
+    link: "Link:"
+
+    save: "Speichern"
+    login: "Anmelden"
+    register: "Registrieren"
+    or_cancel: "oder abbrechen"
