@@ -19,6 +19,8 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => "0.6", :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "rack",        :version => "1.0.1" # the rails gem seems to be missing the right version!
+  config.gem "sqlite3-ruby",:version => "1.2.5",  :lib => "sqlite3"
   config.gem "haml",        :version => "2.2.16"
   config.gem "friendly_id", :version => "2.2.7"
   config.gem "authlogic",   :version => "2.1.3"
