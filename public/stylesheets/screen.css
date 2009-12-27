@@ -1,9 +1,15 @@
 body { background:#eeeee6; color:#333; font:14px/20px georgia,times,serif; }
 
+/* headlines */
 h1, h2, h3 { font-family:georgia,times,serif; text-shadow:1px 1px #ccc; }
 h1 { font-size:22px; line-height:22px; }
 h2 { font-size:40px; font-weight:normal; line-height:40px; margin-bottom:20px; text-indent:-2px; text-transform:uppercase; }
 h3 { font-size:22px; line-height:22px; text-transform:uppercase; margin:40px 0 20px 0; }
+
+/* elements */
+strong { font-weight:bold; }
+p { margin-bottom:20px; }
+pre { font-family:monospace; }
 
 /* links */
 a:link, a:visited { color:#680; text-decoration:underline; }
@@ -11,14 +17,9 @@ a:hover, a:active { color:#680; text-decoration:none; }
 
 h1 a:link, h1 a:visited { color:#333; text-decoration:none; }
 .black a, a.black { color:#333; }
-
 a.cancel { margin-left:8px; }
 
-
-strong { font-weight:bold; }
-p { margin-bottom:20px; }
-pre { font-family:monospace; }
-
+/* layout */
 #center { margin:30px auto; width:850px; }
 
   h1 { float:left; }
@@ -27,18 +28,14 @@ pre { font-family:monospace; }
 
   #stage { border-top:1px dashed #d1d1c6; margin-top:10px; padding:30px 20px; }
 
-
-
+/* objects */
 .person { clear:both; float:left; margin-bottom:20px; width:350px; }
   .person img, .person h4, .person p {  }
   .person img { float:left; margin-right:10px; }
   .person h4 {  }
   .person p { margin:0; }
 
-
-
-br.clear { clear:both; }
-
+/* forms */
 form .block { margin-bottom:10px; }
 form .block.action { margin-top:40px; }
 label { display:block; float:left; text-align:right; padding:2px 10px 0 0; width:100px; }
@@ -50,39 +47,5 @@ input.medium { width:150px; }
 label.input-error, div.input-error { color:#bc100e; }
 div.input-error { font-size:12px; font-style:italic; }
 
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
-
+/* useful */
+br.clear { clear:both; }
