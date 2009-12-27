@@ -1,7 +1,18 @@
 h1. hamburg.onruby
 
-p. Website for "hamburg.onruby":http://hamburg.onruby.de
+p. Website für "hamburg.onruby":http://hamburg.onruby.de
 
-h3. How can I participate?
+h3. Wo wird die Seite gehostet?
 
-p. Just let me know who you are, what you're doing and why you want to contribute to the website. That's it.
+p. Der Plan ist, die Website auf "heroku":http://heroku.com zu lassen. Dies bringt einige "Constraints":http://docs.heroku.com/constraints mit sich, über die man bescheid wissen sollte.
+
+h3. Was ist noch zu tun?
+
+p. Vieles. Hier eine unvollständige Auflistung:
+
+* Validierung der bestehenden Formulare
+* Übersichts-Seite (mit Projekten? Zweispaltig?)
+* Benutzerprofil-Seite
+* JavaScript zum hinzufügen/entfernen weiterer Projekte (Benutzerprofil)
+* Styling
+* Specs
