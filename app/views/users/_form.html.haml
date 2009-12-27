@@ -1,9 +1,12 @@
 .block
   = u.label :username, t("labels.username")
   = u.text_field :username
+  = u.error_message_on :username, :css_class => "input-error"
 .block
   = u.label :email, t("labels.email")
   = u.text_field :email
+  = u.error_message_on :email, :css_class => "input-error"
 .block
   = u.label :password, t("labels.password")
   = u.password_field :password
+  = u.error_message_on :password, :css_class => "input-error"

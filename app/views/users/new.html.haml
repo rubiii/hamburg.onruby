@@ -1,9 +1,8 @@
 - form_for @user do |u|
-  = u.error_messages
 
   %h2 Neues Profil
   = render :partial => "form", :locals => { :u => u }
 
   .block.action
-    = u.submit t("labels.register")
+    = u.submit t("labels.register"), :class => "button"
     = link_to t("labels.or_cancel"), root_url, :class => "cancel"

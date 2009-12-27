@@ -1,19 +1,19 @@
 - form_for setup_user(@user) do |u|
-  = u.error_messages
 
   %h2 Dein Profil
   = render :partial => "form", :locals => { :u => u }
 
+  %h3 Deine Projekte
   - u.fields_for :projects do |p|
-    %h3 Deine Projekte
-
     .block
       = p.label :name, t("labels.name")
       = p.text_field :name
+      = p.error_message_on :name, :css_class => "input-error"
     .block
       = p.label :link, t("labels.link")
       = p.text_field :link
+      = p.error_message_on :link, :css_class => "input-error"
 
   .block.action
-    = u.submit t("labels.save")
+    = u.submit t("labels.save"), :class => "button"
     = link_to t("labels.or_cancel"), users_path, :class => "cancel"

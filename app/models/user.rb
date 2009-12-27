@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
   has_many :projects
   accepts_nested_attributes_for :projects, :allow_destroy => true, :reject_if => :all_blank
 
-  validates_format_of :username, :with => /^[A-Za-z0-9-]+$/,
-    :message => "The username can only contain alphanumeric characters and dashes."
+  validates_presence_of :username
   validates_uniqueness_of :username, :case_sensitive => false
+
+  validates_presence_of :email
+  validates_presence_of :password
 
 end

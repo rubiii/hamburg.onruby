@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find params[:id]
   rescue ActiveRecord::RecordNotFound
+    @username = params[:id]
     render :action => "not_found"
   end
 
