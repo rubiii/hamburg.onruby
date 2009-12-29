@@ -3,6 +3,10 @@
   %h2 Dein Profil
   = render :partial => "form", :locals => { :u => u }
 
+  %h3 ...
+  = u.label :company, t("labels.company")
+  = u.text_field :company
+  
   %h3 Deine Projekte
   - u.fields_for :projects do |p|
     .block

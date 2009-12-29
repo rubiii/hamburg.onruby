@@ -58,10 +58,10 @@ describe User do
     Project.exists?(1).should be_false
   end
 
-  it "should validate the password" do
+  it "should allow blank passwords on update" do
     @user = users(:dette)
     @user.password = ""
-    @user.should have(1).errors_on(:password)
+    @user.should be_valid
   end
 
   it "should validate the email has at least 3 chars" do
@@ -74,6 +74,11 @@ describe User do
     @user = users(:dette)
     @user.email = "ab3sdlajfkldskjflks"
     @user.should have(1).errors_on(:email)
+  end
+  
+  it "should have a company" do
+    @user = users(:dette)
+    @user.company.should_not be_nil
   end
   
 end

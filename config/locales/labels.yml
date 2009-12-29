@@ -6,6 +6,7 @@ de:
     email: "E-Mail:"
     name: "Name:"
     link: "Link:"
+    company: "Firma:"
 
     save: "Speichern"
     login: "Anmelden"
