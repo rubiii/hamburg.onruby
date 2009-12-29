@@ -1,0 +1,9 @@
+iphone:
+  user_id: 1
+  name: iphone
+  link: "http://iphone.blau.de"
+
+android:
+  user_id: 1
+  name: android
+  link: "http://android.blau.de"

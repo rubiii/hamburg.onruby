@@ -1,0 +1,15 @@
+dette:
+  username: dette
+  email: dette@blau.de
+  crypted_password: 5ea6b7f422de0566204465089c4ef50c1dd37876920b331a63877a144517b1cbfd7c0d92e4859867dd69c4fb17cb70dd63a8c999e44685f3337e1eb8e3b99607
+  password_salt: 61ZK5H08JivmCup8ufdK
+  persistence_token: 2fc0091a55e80f44b4f1a33d10fd2a7736a8f74e89d9e7d67face727b4224bc0de3e3ef21bdca4892924a50fdccb21a1cc05420c7eca9fe8db7063a6419d27d6
+  company: blau
+
+lesch:
+  username: lesch
+  email: lesch@blau.de
+  crypted_password: 5ea6b7f422de0566204465089c4ef50c1dd37876920b331a63877a144517b1cbfd7c0d92e4859867dd69c4fb17cb70dd63a8c999e44685f3337e1eb8e3b99607
+  password_salt: 61ZK5H08JivmCup8ufdK
+  persistence_token: 2fc0091a55e80f44b4f1a33d10fd2a7736a8f74e89d9e7d67face727b4224bc0de3e3ef21bdca4892924a50fdccb21a1cc05420c7eca9fe8db7063a6419d27d6
+          
