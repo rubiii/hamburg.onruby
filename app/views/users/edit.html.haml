@@ -8,15 +8,17 @@
   = u.text_field :company
   
   %h3 Deine Projekte
-  - u.fields_for :projects do |p|
-    .block
-      = p.label :name, t("labels.name")
-      = p.text_field :name
-      = p.error_message_on :name, :css_class => "input-error"
-    .block
-      = p.label :link, t("labels.link")
-      = p.text_field :link
-      = p.error_message_on :link, :css_class => "input-error"
+  .projects.edit
+    - u.fields_for :projects do |p|
+      .project
+        .block
+          = p.label :name, t("labels.name")
+          = p.text_field :name
+          = p.error_message_on :name, :css_class => "input-error"
+        .block
+          = p.label :link, t("labels.link")
+          = p.text_field :link
+          = p.error_message_on :link, :css_class => "input-error"
 
   .block.action
     = u.submit t("labels.save"), :class => "button"

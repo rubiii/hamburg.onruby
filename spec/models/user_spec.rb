@@ -10,20 +10,17 @@ describe User do
 
   it "validates that the username contains at least 3 characters" do
     @user.username = "ab"
-
-    @user.should have(1).errors_on(:username)
+    @user.should have(1).error_on(:username)
   end
 
   it "validates that the username does not contain invalid characters" do
     @user.username = "dude?"
-
-    @user.should have(1).errors_on(:username)
+    @user.should have(1).error_on(:username)
   end
 
   it "validates that the username is unique" do
     @user = User.new :username => users(:dette).username, :email => "wtf@example.com", :password => "wtfwtfwtf"
-
-    @user.should have(1).errors_on(:username)
+    @user.should have(1).error_on(:username)
   end
 
   it "finds a user by username as the id" do

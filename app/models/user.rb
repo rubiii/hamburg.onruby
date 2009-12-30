@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 
   acts_as_authentic do |c|
     c.require_password_confirmation = false
-    c.ignore_blank_passwords = true
   end
 
   has_friendly_id :username

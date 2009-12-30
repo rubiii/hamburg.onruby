@@ -12,5 +12,5 @@
         - account_links.each do |link|
           %li= link
       %br.clear
-      #stage
-        = yield
+      #stage= yield
+    = javascript_include_tag "jquery-1.3.2.min", "project", :cache => true

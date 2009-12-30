@@ -20,7 +20,7 @@ class UserSessionsController < ApplicationController
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-    flash[:notice] = t :logged_out, :scope => :flash
+    flash[:notice] = t "flash.logged_out"
     redirect_to root_url
   end
 

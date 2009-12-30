@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # Save a new user account.
   def create
     @user = User.new params[:user]
+
     if @user.save
       flash[:notice] = t :registered, :scope => :flash
       redirect_to root_url
@@ -39,7 +40,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @user.update_attributes params[:user]
-      flash[:notice] = t :saved_user, :scope => :flash
+      flash[:notice] = t "flash.saved_user"
       redirect_to root_url
     else
       render :action => "edit"
