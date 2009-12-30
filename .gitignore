@@ -8,3 +8,5 @@ public/stylesheets/all.js
 .project
 .loadpath
 nbproject
+*~
+coverage

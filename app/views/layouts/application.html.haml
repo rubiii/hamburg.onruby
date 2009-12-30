@@ -10,7 +10,9 @@
       %h1= link_to "<strong>hamburg</strong>.onruby", root_url
       %ul#account
         - account_links.each do |link|
-          %li= link
+          %li= link_to link[:name], link[:link]
       %br.clear
-      #stage= yield
+      #stage
+        = show_flash
+        = yield
     = javascript_include_tag "jquery-1.3.2.min", "project", :cache => true

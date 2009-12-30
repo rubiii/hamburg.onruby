@@ -1,0 +1,11 @@
+%h2 Passwort anfordern
+
+- form_tag password_resets_url do
+  .block
+    = label :user, :email, t("labels.email")
+    = text_field :user, :email
+    = error_message_on :user, :email, :css_class => "input-error"
+
+  .block.action
+    = submit_tag t("labels.send"), :class => "button"
+    = link_to t("labels.or_cancel"), root_url, :class => "cancel"

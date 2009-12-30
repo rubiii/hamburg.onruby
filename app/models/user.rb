@@ -11,4 +11,9 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :projects, :allow_destroy => true,
     :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
+  def deliver_password_reset_instructions!
+    reset_perishable_token!  
+    Notifier.deliver_password_reset_instructions(self)  
+  end
+
 end

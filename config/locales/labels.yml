@@ -9,6 +9,9 @@ de:
     company: "Firma:"
 
     save: "Speichern"
+    send: "Absenden"
     login: "Anmelden"
+    logout: "Abmelden"
     register: "Registrieren"
     or_cancel: "oder abbrechen"
+    password_resets: "neues Passwort anfordern"

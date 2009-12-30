@@ -4,3 +4,8 @@ de:
     logged_out: Abmeldung erfolgreich
     registered: Registrierung erfolgreich
     saved_user: Änderungen am Profil gespeichert
+    password:
+      reset_delivered: Passwort zurückgesetzt
+      email_unknown: Die E-Mail-Adresse unbekannt
+      perishable_token_unknown: TODO
+      success: TODO
