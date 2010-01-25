@@ -15,6 +15,9 @@ class PasswordResetsController < ApplicationController
     end  
   end
 
+  def edit
+  end
+
   def update
     @user.password = params[:user][:password]
     if @user.save
