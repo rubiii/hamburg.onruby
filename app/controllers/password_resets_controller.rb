@@ -15,10 +15,6 @@ class PasswordResetsController < ApplicationController
     end  
   end
 
-  def edit
-    render
-  end
-
   def update
     @user.password = params[:user][:password]
     if @user.save
@@ -29,7 +25,7 @@ class PasswordResetsController < ApplicationController
     end
   end
 
-  private
+private
 
   def load_user_using_perishable_token
     @user = User.find_using_perishable_token(params[:id])
