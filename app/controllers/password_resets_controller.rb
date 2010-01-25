@@ -4,7 +4,7 @@ class PasswordResetsController < ApplicationController
 
   def create
     @user = User.find_by_email(params[:user][:email])  
-    if @user  
+    if @user 
       @user.deliver_password_reset_instructions!  
       flash[:notice] = t('flash.password.reset_delivered')
       redirect_to root_url
