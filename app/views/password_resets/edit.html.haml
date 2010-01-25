@@ -1,0 +1,11 @@
+%h2 Passwort ändern
+
+- form_tag password_reset_url(params[:id]), :method => "put" do
+  .block
+    = label :user, :password, t("labels.password")
+    = password_field :user, :password
+    = error_message_on :user, :password, :css_class => "input-error"
+
+  .block.action
+    = submit_tag t("labels.send"), :class => "button"
+    = link_to t("labels.or_cancel"), root_url, :class => "cancel"
