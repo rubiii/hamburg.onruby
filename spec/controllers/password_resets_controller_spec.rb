@@ -12,7 +12,7 @@ describe PasswordResetsController do
       before { post :create, :user => { :email => users(:dette).email } }
 
       it "should redirect to :root" do
-        response.should redirect_to root_url
+        response.should redirect_to(root_url)
       end
 
       it "should have flash :notice" do
@@ -38,18 +38,18 @@ describe PasswordResetsController do
       before { post :update, :id => 'perish_secret', :user => { :password => 'good_password' } }
 
       it "should assign user" do
-        assigns(:user).should be_a User
+        assigns(:user).should be_a(User)
       end
 
       it "should redirect to :login" do
-        response.should redirect_to login_url
+        response.should redirect_to(login_url)
       end
     end
 
     describe "on error" do
       it "should redirect :root for unknown token" do
         post :update, :id => 'unknown_perish_secret'
-        response.should redirect_to root_url
+        response.should redirect_to(root_url)
       end
 
       it "should flash :notice for unknown token" do
@@ -61,6 +61,18 @@ describe PasswordResetsController do
         post :update, :id => 'perish_secret', :user => { :password => 'ts' }
         response.should render_template(:edit)
       end
+    end
+  end
+
+  describe "GET :edit" do
+    it "should render :edit for known :id" do
+      get :edit, :id => 'perish_secret'
+      response.should render_template(:edit)
+    end
+
+    it "should redirect :edit for known :id" do
+      get :edit, :id => 'unknown_perish_secret'
+      response.should redirect_to(root_url)
     end
   end
 

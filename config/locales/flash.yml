@@ -7,5 +7,5 @@ de:
     password:
       reset_delivered: Passwort zurückgesetzt
       email_unknown: Die E-Mail-Adresse unbekannt
-      perishable_token_unknown: TODO
+      perishable_token_unknown: TODO biatch
       success: TODO

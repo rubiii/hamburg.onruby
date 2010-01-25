@@ -1,10 +1,11 @@
 class PasswordResetsController < ApplicationController
-  before_filter :load_user_using_perishable_token, :only => [:edit, :update] 
+  
+  before_filter :load_user_using_perishable_token, :only => [:edit, :update]
   before_filter :current_user
 
   def create
-    @user = User.find_by_email(params[:user][:email])  
-    if @user 
+    @user = User.find_by_email(params[:user][:email])
+    if @user
       @user.deliver_password_reset_instructions!  
       flash[:notice] = t('flash.password.reset_delivered')
       redirect_to root_url
@@ -12,6 +13,10 @@ class PasswordResetsController < ApplicationController
       flash[:notice] = t('flash.password.email_unknown')
       render :action => :new  
     end  
+  end
+
+  def edit
+    render
   end
 
   def update
@@ -24,8 +29,8 @@ class PasswordResetsController < ApplicationController
     end
   end
 
-private
-  
+  private
+
   def load_user_using_perishable_token
     @user = User.find_using_perishable_token(params[:id])
     unless @user

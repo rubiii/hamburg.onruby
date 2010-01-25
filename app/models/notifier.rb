@@ -1,7 +1,7 @@
 class Notifier < ActionMailer::Base
   default_url_options[:host] = 'http://localhost:3000'
 
-  def password_reset_instructions(user)  
+  def password_reset_instructions(user)
     subject       "Password Reset Instructions"
     from          "phoetmail@googlemail.com"
     recipients    user.email
